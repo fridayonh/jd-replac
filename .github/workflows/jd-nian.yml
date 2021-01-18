@@ -7,7 +7,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: jx_nian
+        types: jd_nian
 
 jobs:
     build:
@@ -24,7 +24,7 @@ jobs:
                   npm install
             - name: "运行 【lxk0301-京东年兽】"
               run: |
-                  node jx_nian.js
+                  node jd_nian.js
               env:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
