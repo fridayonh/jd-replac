@@ -24,7 +24,7 @@ jobs:
                   npm install
             - name: "运行 【京东beauty】"
               run: |
-                  node jd_bean_change.js
+                  node jd_beauty_lattray.js
               env:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
