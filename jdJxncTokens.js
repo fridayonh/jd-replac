@@ -7,8 +7,9 @@
 // {"farm_jstoken":"749a90f871adsfads8ffda7bf3b1576760","timestamp":"1610165423873","phoneid":"42c7e3dadfadsfdsaac-18f0e4f4a0cf"}
 let JxncTokens = [
   '',//账号一的京喜农场token
-  '',//账号二的京喜农场token
-]
+  '{"farm_jstoken":"c3c1bab9cb6f161526c7f28dcde15e44","phoneid":"5cb2b51f3f0944502887df49d2b38a436d64bb72","timestamp":"1612248140108","pin":"15730703300_p"}',//账号二的京喜农场token,
+  '',
+  '{"farm_jstoken":"2874faa6e06369b43ba8439024cb56f8","phoneid":"5cb2b51f3f0944502887df49d2b38a436d64bb72","timestamp":"1612247693703","pin":"jd_OozQKNjSAlUw"}']
 // 判断github action里面是否有京喜农场 token 
 if (process.env.JXNCTOKENS) {
   if (process.env.JXNCTOKENS.indexOf('&') > -1) {
