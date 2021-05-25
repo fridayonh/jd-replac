@@ -68,20 +68,6 @@ let inviteCodes = ['xBd-HlYMlLUzqSkuz0qzAzuayqOG3FfAIeOTGLowr29_KbnH2bV4EX4@RtGK
       }
       await shareCodesFormat()
       await getInfo('',true);
-      for (let i = 0; i < $.newShareCodes.length; ++i) {
-        console.log(`开始助力 【${$.newShareCodes[i]}】`)
-        let res = await getInfo($.newShareCodes[i])
-        if (res && res['data']['bizCode'] === 0) {
-          if (res['data']['result']['toasts'] && res['data']['result']['toasts'][0]['status'] === '3') {
-            console.log(`助力次数已耗尽，跳出`)
-            break
-          }
-        }
-        if ((res && res['status'] && res['status'] === '3') || (res && res.data && res.data.bizCode === -11)) {
-          // 助力次数耗尽 || 黑号
-          break
-        }
-      }
       await getInviteInfo();//雇佣
       if (exchangeFlag) {
         const res = await city_lotteryAward();//抽奖
